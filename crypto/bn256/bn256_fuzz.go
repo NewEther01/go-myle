@@ -12,8 +12,8 @@ import (
 	"io"
 	"math/big"
 
-	cloudflare "github.com/ethereum/go-ethereum/crypto/bn256/cloudflare"
-	google "github.com/ethereum/go-ethereum/crypto/bn256/google"
+	cloudflare "github.com/zsmartex/go-zsmart/crypto/bn256/cloudflare"
+	google "github.com/zsmartex/go-zsmart/crypto/bn256/google"
 )
 
 func getG1Points(input io.Reader) (*cloudflare.G1, *google.G1) {

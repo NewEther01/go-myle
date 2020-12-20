@@ -1,18 +1,18 @@
-// Copyright 2017 The go-ethereum Authors
-// This file is part of go-ethereum.
+// Copyright 2017 The go-zsmart Authors
+// This file is part of go-zsmart.
 //
-// go-ethereum is free software: you can redistribute it and/or modify
+// go-zsmart is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
 //
-// go-ethereum is distributed in the hope that it will be useful,
+// go-zsmart is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 // GNU General Public License for more details.
 //
 // You should have received a copy of the GNU General Public License
-// along with go-ethereum. If not, see <http://www.gnu.org/licenses/>.
+// along with go-zsmart. If not, see <http://www.gnu.org/licenses/>.
 
 // faucet is a Ether faucet backed by a light client.
 package main
@@ -41,24 +41,24 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/accounts"
-	"github.com/ethereum/go-ethereum/accounts/keystore"
-	"github.com/ethereum/go-ethereum/cmd/utils"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/eth"
-	"github.com/ethereum/go-ethereum/eth/downloader"
-	"github.com/ethereum/go-ethereum/ethclient"
-	"github.com/ethereum/go-ethereum/ethstats"
-	"github.com/ethereum/go-ethereum/les"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/discv5"
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/ethereum/go-ethereum/p2p/nat"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/zsmartex/go-zsmart/accounts"
+	"github.com/zsmartex/go-zsmart/accounts/keystore"
+	"github.com/zsmartex/go-zsmart/cmd/utils"
+	"github.com/zsmartex/go-zsmart/common"
+	"github.com/zsmartex/go-zsmart/core"
+	"github.com/zsmartex/go-zsmart/core/types"
+	"github.com/zsmartex/go-zsmart/eth"
+	"github.com/zsmartex/go-zsmart/eth/downloader"
+	"github.com/zsmartex/go-zsmart/ethclient"
+	"github.com/zsmartex/go-zsmart/ethstats"
+	"github.com/zsmartex/go-zsmart/les"
+	"github.com/zsmartex/go-zsmart/log"
+	"github.com/zsmartex/go-zsmart/node"
+	"github.com/zsmartex/go-zsmart/p2p"
+	"github.com/zsmartex/go-zsmart/p2p/discv5"
+	"github.com/zsmartex/go-zsmart/p2p/enode"
+	"github.com/zsmartex/go-zsmart/p2p/nat"
+	"github.com/zsmartex/go-zsmart/params"
 	"github.com/gorilla/websocket"
 )
 
@@ -474,7 +474,7 @@ func (f *faucet) apiHandler(w http.ResponseWriter, r *http.Request) {
 			id = username
 		default:
 			//lint:ignore ST1005 This error is to be displayed in the browser
-			err = errors.New("Something funky happened, please open an issue at https://github.com/ethereum/go-ethereum/issues")
+			err = errors.New("Something funky happened, please open an issue at https://github.com/zsmartex/go-zsmart/issues")
 		}
 		if err != nil {
 			if err = sendError(conn, err); err != nil {

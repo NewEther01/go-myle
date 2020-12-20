@@ -1,18 +1,18 @@
-// Copyright 2017 The go-ethereum Authors
-// This file is part of go-ethereum.
+// Copyright 2017 The go-zsmart Authors
+// This file is part of go-zsmart.
 //
-// go-ethereum is free software: you can redistribute it and/or modify
+// go-zsmart is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
 //
-// go-ethereum is distributed in the hope that it will be useful,
+// go-zsmart is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 // GNU General Public License for more details.
 //
 // You should have received a copy of the GNU General Public License
-// along with go-ethereum. If not, see <http://www.gnu.org/licenses/>.
+// along with go-zsmart. If not, see <http://www.gnu.org/licenses/>.
 
 package main
 
@@ -28,16 +28,16 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/cmd/evm/internal/compiler"
-	"github.com/ethereum/go-ethereum/cmd/utils"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/core/vm/runtime"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/zsmartex/go-zsmart/cmd/evm/internal/compiler"
+	"github.com/zsmartex/go-zsmart/cmd/utils"
+	"github.com/zsmartex/go-zsmart/common"
+	"github.com/zsmartex/go-zsmart/core"
+	"github.com/zsmartex/go-zsmart/core/rawdb"
+	"github.com/zsmartex/go-zsmart/core/state"
+	"github.com/zsmartex/go-zsmart/core/vm"
+	"github.com/zsmartex/go-zsmart/core/vm/runtime"
+	"github.com/zsmartex/go-zsmart/log"
+	"github.com/zsmartex/go-zsmart/params"
 	"gopkg.in/urfave/cli.v1"
 )
 

@@ -1,4 +1,4 @@
-module github.com/ethereum/go-ethereum
+module github.com/zsmartex/go-zsmart
 
 go 1.13
 

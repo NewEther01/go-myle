@@ -1,18 +1,18 @@
-// Copyright 2014 The go-ethereum Authors
-// This file is part of the go-ethereum library.
+// Copyright 2014 The go-zsmart Authors
+// This file is part of the go-zsmart library.
 //
-// The go-ethereum library is free software: you can redistribute it and/or modify
+// The go-zsmart library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
 //
-// The go-ethereum library is distributed in the hope that it will be useful,
+// The go-zsmart library is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 // GNU Lesser General Public License for more details.
 //
 // You should have received a copy of the GNU Lesser General Public License
-// along with the go-ethereum library. If not, see <http://www.gnu.org/licenses/>.
+// along with the go-zsmart library. If not, see <http://www.gnu.org/licenses/>.
 
 package core
 
@@ -25,18 +25,18 @@ import (
 	"math/big"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/common/math"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/rlp"
-	"github.com/ethereum/go-ethereum/trie"
+	"github.com/zsmartex/go-zsmart/common"
+	"github.com/zsmartex/go-zsmart/common/hexutil"
+	"github.com/zsmartex/go-zsmart/common/math"
+	"github.com/zsmartex/go-zsmart/core/rawdb"
+	"github.com/zsmartex/go-zsmart/core/state"
+	"github.com/zsmartex/go-zsmart/core/types"
+	"github.com/zsmartex/go-zsmart/crypto"
+	"github.com/zsmartex/go-zsmart/ethdb"
+	"github.com/zsmartex/go-zsmart/log"
+	"github.com/zsmartex/go-zsmart/params"
+	"github.com/zsmartex/go-zsmart/rlp"
+	"github.com/zsmartex/go-zsmart/trie"
 )
 
 //go:generate gencodec -type Genesis -field-override genesisSpecMarshaling -out gen_genesis.go
@@ -341,6 +341,17 @@ func DefaultGenesisBlock() *Genesis {
 		GasLimit:   5000,
 		Difficulty: big.NewInt(17179869184),
 		Alloc:      decodePrealloc(mainnetAllocData),
+	}
+}
+
+func DefaultZSmartGenesisBlock() *Genesis {
+	return &Genesis{
+		Config:     params.ZSmartChainConfig,
+		Timestamp:  1608453509,
+		ExtraData:  hexutil.MustDecode("0x0000000000000000000000000000000000000000000000000000000000000000258aeecc4762b67c3fd765bc47e2c62397fffda50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"),
+		GasLimit:   4700000,
+		Difficulty: big.NewInt(1),
+		Alloc:      decodePrealloc(zsmartAllocData),
 	}
 }
 
