@@ -31,7 +31,7 @@ var (
 	RopstenGenesisHash = common.HexToHash("0x41941023680923e0fe4d74a34bdac8141f2540e3ae90623718e47d66d1ca4a2d")
 	RinkebyGenesisHash = common.HexToHash("0x6341fd3daf94b748c72ced5a5b26028f2474f5f00d824504e4fa37a75767e177")
 	GoerliGenesisHash  = common.HexToHash("0xbf7e331f7f7c1dd2e05159666b3bf8bc7a8a3a9eb1d518969eab529dd9b88c1a")
-	ZSmartGenesisHash  = common.HexToHash("0xb11b7371ad6ff3d973884f2f07c748d15272c7d324f5e1e7b91d0e06fceafae7")
+	ZSmartGenesisHash  = common.HexToHash("0x9b1da0488c1e8af0b9e8196f6e280d6181ef92d6b39960523ec7c79931e64aef")
 	// TODO: update with yolov2 values
 	YoloV2GenesisHash = common.HexToHash("0x498a7239036dd2cd09e2bb8a80922b78632017958c332b42044c250d603a8a3e")
 )
